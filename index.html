@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>MAGAZYN FPS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game"></div>
+
+  <section id="start" class="overlay">
+    <div class="panel">
+      <div class="eyebrow">ARENA • SURVIVAL</div>
+      <h1>MAGAZYN <span>FPS</span></h1>
+      <p class="intro">Przetrwaj kolejne fale botów na opuszczonym magazynie.</p>
+      <div class="instructions">
+        <div><b>WASD</b><small>Ruch</small></div>
+        <div><b>MYSZ</b><small>Rozglądanie</small></div>
+        <div><b>LPM</b><small>Strzał</small></div>
+        <div><b>SPACJA</b><small>Skok</small></div>
+        <div><b>R</b><small>Przeładowanie</small></div>
+        <div><b>1 / 2</b><small>Zmiana broni</small></div>
+      </div>
+      <button id="play" class="main-button">ROZPOCZNIJ GRĘ</button>
+      <p class="mobile-note">Na telefonie używaj ekranowych przycisków.</p>
+    </div>
+  </section>
+
+  <section id="gameover" class="overlay hidden">
+    <div class="panel">
+      <h2>GAME OVER</h2>
+      <p id="finalStats">Pokonane boty: 0</p>
+      <button id="restart" class="main-button">ZAGRAJ PONOWNIE</button>
+    </div>
+  </section>
+
+  <div id="topbar">
+    <div class="brand">MAGAZYN <span>FPS</span></div>
+    <div class="map-label">SEKTOR 07 • ARENA 250 × 250</div>
+  </div>
+
+  <div id="crosshair"><span></span></div>
+
+  <div id="hud">
+    <div class="stat"><span class="stat-icon">♥</span><div><small>ENERGIA</small><strong id="hp">100</strong></div></div>
+    <div class="stat"><span class="stat-icon">▣</span><div><small>AMUNICJA</small><strong id="ammo">30 / 120</strong></div></div>
+    <div class="stat"><span class="stat-icon">✦</span><div><small>BOTY</small><strong id="kills">0</strong></div></div>
+    <div class="stat"><span class="stat-icon">⌁</span><div><small>FALE</small><strong id="wave">1</strong></div></div>
+  </div>
+
+  <div id="hint">LPM — strzał • R — przeładuj • ESC — pauza</div>
+  <div id="toast"></div>
+
+  <div id="mobile-controls">
+    <div id="stick-zone"><div id="stick"><span></span></div></div>
+    <div class="mobile-actions">
+      <button id="mobile-jump">↑</button>
+      <button id="mobile-reload">R</button>
+      <button id="mobile-fire">FIRE</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
